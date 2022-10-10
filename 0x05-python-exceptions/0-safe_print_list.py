@@ -6,6 +6,6 @@ def safe_print_list(my_list=[], x=0):
             print("{}".format(my_list[i]), end='')
             list_length += 1
         except IndexError:
-            None
+            pass
     print()
     return list_length
