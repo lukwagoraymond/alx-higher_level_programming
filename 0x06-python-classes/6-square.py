@@ -12,7 +12,7 @@ class Square:
         """initializes the square
         Args:
             size (int): size of a side of the square
-            position (tuple): position of the square in 2D space
+            position (tuple): positoin of the square in 2D space
         Returns:
             None
         """
@@ -24,7 +24,7 @@ class Square:
         Returns:
             The area of the square
         """
-        return self.__size ** 2
+        return (self.__size) ** 2
 
     @property
     def size(self):
@@ -42,25 +42,27 @@ class Square:
         Returns:
             None
         """
-        if not type(value) == int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            if value < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = value
 
     def my_print(self):
         """prints the square
         Returns:
             None
         """
-        for i in range(self.__size):
-            for x in range(self.__position[0]):
-                print("")
-            for j in range(self.__size):
-                print("#", end='')
-            print("")
         if self.__size == 0:
-            print("")
+            print()
+            return
+        for i in range(self.__position[1]):
+            print()
+        for j in range(self.__size):
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for l in range(self.__size)]))
 
     @property
     def position(self):
@@ -78,6 +80,9 @@ class Square:
         Returns:
             None
         """
-        if not type(value[0]) == int and type(value[1]) == int:
+        if type(value) is not tuple or len(value) != 2 or \
+           type(value[0]) is not int or value[0] < 0 or \
+           type(value[1]) is not int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        else:
+            self.__position = value
