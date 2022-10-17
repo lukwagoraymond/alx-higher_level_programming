@@ -9,3 +9,4 @@ This repository contains programs written for the higher-level programming bootc
 5. 0x04. Python -\ More Data Structures: Set, Dictionary
 6. 0x05. Python -\ Exceptions
 7. 0x06. Python -\ Classes and Objects
+9. 0x08. Python -\ More Classes and Objects
