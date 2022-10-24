@@ -12,3 +12,4 @@ This repository contains programs written for the higher-level programming bootc
 8. 0x07. Python -\ Test-driven development
 9. 0x08. Python -\ More Classes and Objects
 10. 0x09. Python -\ Everything is Object
+11. 0x0A. Python -\ Inheritance
