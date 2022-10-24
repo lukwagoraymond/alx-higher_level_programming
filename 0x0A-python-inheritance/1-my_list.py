@@ -3,7 +3,9 @@
 
 
 class MyList(list):
-    """MyList class extends lists to include print_sorted method"""
+    """MyList class extends lists to
+    include print_sorted method
+    """
     def __init__(self):
         """initialises the object"""
         super().__init__()
