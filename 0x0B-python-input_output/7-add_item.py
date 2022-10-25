@@ -10,7 +10,7 @@ Example:
     $ cat add_item.json ; echo ""
     ["ALX", "Best", "School", "Python", "89", "C"]
 """
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     save_to_json_file = \
@@ -23,5 +23,8 @@ if __name__ == "__main__":
         file_data = load_from_json_file(filename)
     except FileNotFoundError:
         file_data = []
-    file_data.extend(sys.argv[1:])
+
+    for arg in argv[1:]:
+        file_data.append(arg)
+
     save_to_json_file(file_data, filename)
