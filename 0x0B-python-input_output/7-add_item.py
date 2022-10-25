@@ -1,32 +1,37 @@
 #!/usr/bin/python3
-""" 7-add_item.py
-Program to save strings from command line arguments to file called
-`add_item.json`. File contains a json serialized list of all strings
-entered as arguments to the program.
 """
-
+    6-from_json_string.py
+    Function that writes an Object to \
+    a text file, using a JSON representation.
+"""
 import sys
+import json
+
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-def add_item(args, filename):
-    """
-        adds items to a json file
-        @args (objects): The arguments that need to be added.
-        @filename: The file that needs to be updated
-    """
+def create_file_list():
+    """Adds all arguments to a Python list, and then save them to a file"""
+    obj_9 = load_from_json_file("add_item.json")
+
+    for i in range(1, len(sys.argv)):
+        obj_9.append(str(sys.argv[i]))
+
+    save_to_json_file(obj_9, "add_item.json")
+
+
+if len(sys.argv) < 2:
     try:
-        content = load_from_json_file(filename)
+        f = open("add_item.json")
+        f.close()
     except IOError:
-        content = []
-
-    for item in args:
-        content.append(item)
-    save_to_json_file(content, filename)
-
-
-if __name__ == "__main__":
-    args = sys.argv[1:]
-    filename = "add_item.json"
-    add_item(args, filename)
+        save_to_json_file([], "add_item.json")
+else:
+    try:
+        f = open("add_item.json")
+        f.close()
+        create_file_list()
+    except IOError:
+        save_to_json_file([], "add_item.json")
+        create_file_list()
