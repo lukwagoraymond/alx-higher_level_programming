@@ -29,4 +29,4 @@ if __name__ == "__main__":
     file_data = load_from_json_file("add_item.json")
     if len(sys.argv) > 1:
         file_data.extend(sys.argv[1:])
-    save_to_json_file(file_data, filename)
+    save_to_json_file(file_data, "add_item.json")
