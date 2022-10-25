@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
     7-add_item.py
     Program to save strings from command line arguments to file called
