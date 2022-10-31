@@ -39,12 +39,12 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Writes a jason string to file like object"""
-        if list_objs is None or list_objs == []:
-            lst = []
-        else:
-            lst = [i.to_dictionary() for i in list_objs]
-            filename = "{}.json".format(cls.__name__)
-            with open(filename, mode='w', encoding='utf-8') as f:
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, mode='w', encoding='utf-8') as f:
+            if list_objs is None or list_objs == []:
+                f.write("[]")
+            else:
+                lst = [i.to_dictionary() for i in list_objs]
                 f.write(cls.to_json_string(lst))
 
     @classmethod
