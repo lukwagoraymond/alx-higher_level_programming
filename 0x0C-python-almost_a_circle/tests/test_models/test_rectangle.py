@@ -534,7 +534,7 @@ class TestRectangleDisplayStr(unittest.TestCase):
         r1 = Rectangle(4, 6, 2, 1, 12)
         r2 = Rectangle(5, 5, 1)
         self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
-        self.assertEqual(str(r2), "[Rectangle] (1) 1/0 - 5/5")
+        self.assertEqual(str(r2), "[Rectangle] (30) 1/0 - 5/5")
 
     def test_str_method_changed_attributes(self):
         r = Rectangle(7, 7, 0, 0, [4])
