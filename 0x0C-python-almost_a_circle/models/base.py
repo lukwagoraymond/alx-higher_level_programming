@@ -24,7 +24,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """Convents python dictionaries to jason strings"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return json.dumps("[]")
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
