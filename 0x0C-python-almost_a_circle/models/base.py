@@ -63,7 +63,8 @@ class Base:
     def load_from_file(cls):
         """Loads json string and returns a list of instances"""
         try:
-            with open("{}.json".format(cls.__name__), mode='r', encoding='utf-8') as rf:
+            with open("{}.json".format(cls.__name__),
+                      mode='r', encoding='utf-8') as rf:
                 lst_dictionaries = cls.from_json_string(rf.read())
                 return [cls.create(**i) for i in lst_dictionaries]
         except FileNotFoundError:
