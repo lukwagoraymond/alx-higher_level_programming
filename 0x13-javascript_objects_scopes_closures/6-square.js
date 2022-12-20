@@ -6,17 +6,11 @@ class Square extends require('./5-square.js') {
   }
 
   /* Method charPrint(c) */
-  charPrint (C) {
-    if (typeof C === 'undefined') {
+  charPrint (c) {
+    if (typeof c === 'undefined') {
       this.print();
     } else {
-      for (let i = 0; i < this.height; i++) {
-        let row = '';
-        for (let j = 0; j < this.width; j++) {
-          row += 'C';
-        }
-        console.log(row);
-      }
+      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
     }
   }
 }
