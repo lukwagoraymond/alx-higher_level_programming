@@ -6,7 +6,7 @@ class Square extends require('./5-square.js') {
   }
 
   /* Method charPrint(c) */
-  charPrint (C) {
+  charPrint (c) {
     if (typeof c === 'undefined') {
       this.print();
     } else {
