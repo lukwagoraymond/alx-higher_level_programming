@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter(State.name == argv[4]).first()
+    result = session.query(State).filter_by(name = argv[4]).first()
     if result is None:
         print("Not Found")
     else:
