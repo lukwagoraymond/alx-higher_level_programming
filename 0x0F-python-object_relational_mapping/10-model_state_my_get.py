@@ -19,8 +19,8 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).filter_by(name=argv[4]).all()
-    if len(states) == 0:
-        print("Not Found")
+    if result is None:
+        print("Not found")
     else:
         for row in result:
             print("{}".format(row.id))
