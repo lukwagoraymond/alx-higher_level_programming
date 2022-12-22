@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     try:
-        for row in session.query(State.id, State.name).filter(State.id == '1'):
-            print("{}: {}".format(row.id, row.name))
+        result = session.query(State).order_by(State.id).first()
+        print("{}: {}".format(result.id, result.name))
     except:
         print("Nothing")
