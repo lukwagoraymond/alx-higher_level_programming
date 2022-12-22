@@ -2,9 +2,10 @@
 """
 Prints `State` object with the `name` passed as
 argument from the database `hbtn_0e_6_usa`
-Usage: ./9-model_state_filter_a.py <mysql username>
-                                   <mysql password>
-                                   <database name>
+Usage: ./10-mode_state_my_get.py <mysql username>
+                                 <mysql password>
+                                 <database name>
+                                 <name searched>
 """
 from sys import argv
 from sqlalchemy import create_engine
@@ -18,9 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).filter_by(name=argv[4]).all()
+    result = session.query(State).filter_by(name=argv[4]).first()
     if result is None:
         print("Not found")
     else:
-        for row in result:
-            print("{}".format(row.id))
+        print("{0}".format(result.id))
