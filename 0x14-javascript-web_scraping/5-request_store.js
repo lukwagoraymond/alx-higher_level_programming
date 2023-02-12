@@ -14,9 +14,9 @@ request(urlBase, function (error, response, body) {
     console.log(error);
   } else {
     fs.writeFile(fileName, body, 'utf8', (error) => {
-        if (error) {
-            console.log(error);
-        }
+      if (error) {
+        console.log(error);
+      }
     });
   }
 });
