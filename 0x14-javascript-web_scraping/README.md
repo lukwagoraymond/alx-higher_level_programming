@@ -6,6 +6,10 @@ Read or watch:
 * [The workflow of accessing the attributes of a simply-created JSON object by Jimmy Tran from Cohort 1 - San Francisco](https://medium.com/@vietkieutie/the-workflow-of-accessing-the-attributes-of-a-simply-created-json-object-82a5b33e2319)
 * [request module](https://github.com/request/request)
 * [Modern JS](https://github.com/mbeaudru/modern-js-cheatsheet)
+* [Node.js File System Module](https://www.w3schools.com/nodejs/nodejs_filesystem.asp)
+* [How To Work with Files using the fs Module in Node.js](https://www.digitalocean.com/community/tutorials/how-to-work-with-files-using-the-fs-module-in-node-js)
+* [How to Write Asynchronous Code in Node.js](https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js)
+
 
 ---
 ## Learning Objectives:bulb:
